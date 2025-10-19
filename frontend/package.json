@@ -6,9 +6,24 @@
   "overrides": {
   "schema-utils": "3.3.0",
   "ajv": "6.12.6",
-  "ajv-keywords": "3.5.2"
-},
+  "ajv-keywords": "3.5.2",
 
+  "webpack": {
+    "schema-utils": "3.3.0"
+  },
+  "terser-webpack-plugin": {
+    "schema-utils": "3.3.0"
+  },
+  "css-loader": {
+    "schema-utils": "3.3.0"
+  },
+  "file-loader": {
+    "schema-utils": "3.3.0"
+  },
+  "@svgr/webpack": {
+    "schema-utils": "3.3.0"
+  }
+},
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.8",
@@ -61,11 +76,12 @@
     "zod": "^3.24.4"
   },
 
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test"
-  },
+ "scripts": {
+  "start": "craco start",
+  "build": "craco build",
+  "test": "craco test",
+  "prebuild": "node -e \"console.log('schema-utils:', require('schema-utils/package.json').version); console.log('ajv:', require('ajv/package.json').version); console.log('ajv-keywords:', require('ajv-keywords/package.json').version);\""
+},
 
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
