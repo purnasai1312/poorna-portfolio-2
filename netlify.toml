@@ -1,6 +1,6 @@
 [build]
   base = "frontend"
-  command = "corepack disable && npm install --legacy-peer-deps --no-audit --no-fund && npm run build"
+  command = "npm install && npm run build"
   publish = "frontend/build"
 
 [build.environment]
