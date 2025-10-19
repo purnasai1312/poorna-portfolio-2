@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
-  command = "npm install && npm run build"
-  publish = "frontend/build"
+  command = "npm install --legacy-peer-deps --no-audit --no-fund && npm run build"
+  publish = "build"        # <- not frontend/build
 
 [build.environment]
   NODE_VERSION = "20"
