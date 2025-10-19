@@ -1,7 +1,7 @@
 [build]
   base = "frontend"
-  command = "npm ci || npm install && npm run build"
-  publish = "build"
+  command = "corepack disable && npm install --legacy-peer-deps --no-audit --no-fund && npm run build"
+  publish = "frontend/build"
 
 [build.environment]
   NODE_VERSION = "20"
