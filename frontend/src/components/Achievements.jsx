@@ -25,10 +25,10 @@ const Achievements = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full mb-6">
               <Award className="w-5 h-5 text-amber-400" />
-              <span className="text-sm text-amber-300 font-medium">Key Achievements</span>
+              <span className="text-sm text-amber-300 font-medium">Career Highlights</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
-              Proven <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400">Impact</span>
+              Measurable <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400">Impact</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Delivering measurable results across enterprise data engineering projects

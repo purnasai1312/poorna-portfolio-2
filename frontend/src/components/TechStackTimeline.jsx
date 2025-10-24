@@ -21,10 +21,10 @@ const TechStackTimeline = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Cloud Evolution Journey
+              Professional Journey
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              My progression across cloud platforms and technologies over 5 years
+              My progression through AWS and Azure platforms across different industries
             </p>
           </div>
 
@@ -78,25 +78,6 @@ const TechStackTimeline = () => {
                 <div className="md:w-1/2"></div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-6 bg-white rounded-xl shadow-lg px-8 py-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-1">2019-2020</div>
-                <div className="text-sm text-slate-500">AWS Era</div>
-              </div>
-              <div className="h-12 w-px bg-slate-300"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-1">2020-2022, 2024-2025</div>
-                <div className="text-sm text-slate-500">GCP Era</div>
-              </div>
-              <div className="h-12 w-px bg-slate-300"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-600 mb-1">2023-2024</div>
-                <div className="text-sm text-slate-500">Azure Era</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

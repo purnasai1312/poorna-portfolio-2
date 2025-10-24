@@ -153,16 +153,16 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 pb-24">
       <canvas ref={canvasRef} className="absolute inset-0" />
       
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-purple-950/30 to-slate-950/50"></div>
       
-      <div className="relative z-10 container mx-auto px-6 py-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20">
         <div className="max-w-6xl mx-auto">
           {/* Pipeline Visualization */}
-          <div className="mb-12 flex items-center justify-center gap-4">
+          <div className="mb-8 md:mb-12 flex flex-wrap items-center justify-center gap-2 md:gap-4">
             {pipelineSteps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -172,14 +172,14 @@ const Hero = () => {
                       pipelineStep === index ? 'scale-110' : 'scale-100 opacity-60'
                     }`}
                   >
-                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${
+                    <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br ${
                       step.color
                     } flex items-center justify-center shadow-2xl ${
                       pipelineStep === index ? 'shadow-blue-500/50 ring-4 ring-blue-400/30' : ''
                     }`}>
-                      <Icon className="w-10 h-10 text-white" />
+                      <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                     </div>
-                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    <div className="absolute -bottom-6 md:-bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                       <span className={`text-xs font-bold ${
                         pipelineStep === index ? 'text-white' : 'text-gray-500'
                       }`}>
@@ -192,10 +192,10 @@ const Hero = () => {
                   </div>
                   {index < pipelineSteps.length - 1 && (
                     <div className="flex items-center gap-1">
-                      {[...Array(3)].map((_, i) => (
+                      {[...Array(2)].map((_, i) => (
                         <ChevronRight 
                           key={i}
-                          className={`w-6 h-6 transition-all duration-300 ${
+                          className={`w-4 h-4 md:w-6 md:h-6 transition-all duration-300 ${
                             pipelineStep === index ? 'text-blue-400 animate-pulse' : 'text-gray-600'
                           }`}
                           style={{ animationDelay: `${i * 100}ms` }}
@@ -209,31 +209,31 @@ const Hero = () => {
           </div>
 
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-8 backdrop-blur-sm animate-pulse">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-6 md:mb-8 backdrop-blur-sm animate-pulse">
               <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-              <span className="text-sm text-emerald-300 font-medium">Available for Opportunities</span>
+              <span className="text-xs md:text-sm text-emerald-300 font-medium">Available for Opportunities</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-white mb-4 md:mb-6 leading-tight px-4">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient">
                 {personalInfo.name}
               </span>
             </h1>
             
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-1 w-16 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl text-blue-300 font-bold tracking-wide">
+            <div className="flex items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8 px-4">
+              <div className="h-1 w-12 md:w-16 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full"></div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-blue-300 font-bold tracking-wide">
                 {personalInfo.title}
               </h2>
-              <div className="h-1 w-16 bg-gradient-to-l from-transparent via-blue-500 to-transparent rounded-full"></div>
+              <div className="h-1 w-12 md:w-16 bg-gradient-to-l from-transparent via-blue-500 to-transparent rounded-full"></div>
             </div>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed font-light px-4">
               {personalInfo.summary}
             </p>
 
             {/* Animated Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-12 max-w-4xl mx-auto px-4">
               {[
                 { value: personalInfo.yearsOfExperience, label: 'Years Experience', color: 'from-blue-500 to-cyan-500', suffix: '+' },
                 { value: personalInfo.projectsCompleted, label: 'Projects Completed', color: 'from-emerald-500 to-green-500', suffix: '+' },
@@ -242,23 +242,23 @@ const Hero = () => {
               ].map((stat, idx) => (
                 <div 
                   key={idx} 
-                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                  <div className={`absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
                   <div className="relative">
-                    <div className={`text-5xl font-black bg-clip-text text-transparent bg-gradient-to-br ${stat.color} mb-2`}>
+                    <div className={`text-3xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-br ${stat.color} mb-1 md:mb-2`}>
                       {stat.value}{stat.suffix}
                     </div>
-                    <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
+                    <div className="text-xs md:text-sm text-gray-400 font-medium">{stat.label}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
               <Button 
                 onClick={() => scrollToSection('projects')} 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-7 text-lg rounded-xl transition-all shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 group"
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 md:px-10 py-6 md:py-7 text-base md:text-lg rounded-xl transition-all shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 group"
               >
                 View Projects
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -266,7 +266,7 @@ const Hero = () => {
               <Button 
                 onClick={() => scrollToSection('contact')} 
                 variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-10 py-7 text-lg rounded-xl transition-all backdrop-blur-sm"
+                className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 md:px-10 py-6 md:py-7 text-base md:text-lg rounded-xl transition-all backdrop-blur-sm"
               >
                 Get in Touch
               </Button>
@@ -275,17 +275,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating badges at bottom */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-8 text-gray-400">
-        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
+      {/* Floating badges at bottom - Good spacing from buttons */}
+      <div className="hidden md:flex absolute bottom-12 left-1/2 transform -translate-x-1/2 items-center gap-6 text-gray-400">
+        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/10 transition-all">
           <Database className="w-5 h-5 text-blue-400" />
           <span className="text-sm font-medium">Big Data</span>
         </div>
-        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
+        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/10 transition-all">
           <Cloud className="w-5 h-5 text-purple-400" />
           <span className="text-sm font-medium">Cloud Native</span>
         </div>
-        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
+        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 hover:bg-white/10 transition-all">
           <LineChart className="w-5 h-5 text-emerald-400" />
           <span className="text-sm font-medium">Analytics</span>
         </div>
