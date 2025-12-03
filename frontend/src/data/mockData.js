@@ -9,9 +9,9 @@ export const personalInfo = {
   github: 'github.com/purnasai1312',
   website: 'poorna-de.com',
   location: 'Minneapolis, MN',
-  summary: 'Results-driven Data Engineer with 5+ years of experience designing scalable, automated, and cost-efficient data platforms for AWS and Azure. Proven record of reducing data latency by 40%, cutting compute costs by 20%, and delivering ROI-focused analytics solutions for healthcare, fintech, and retail enterprises. Skilled in PySpark, Airflow, dbt, Terraform, and modern cloud data warehousing, with a strong focus on data reliability, automation, and business impact.',
+  summary: ' Data Engineer with 5+ years of experience building batch and streaming ETL/ELT pipelines using PySpark, Airflow, dbt, Azure Data Factory, Azure Databricks, AWS Glue, and cloud data warehouses (Synapse, Redshift, Snowflake, BigQuery). Specialized in transforming healthcare, fintech, and retail data into star/snowflake models, implementing CDC, and optimizing SQL and Spark jobs for performance and cost. Proven track record of reducing data latency by up to 40% and achieving 99%+ pipeline reliability through testing, monitoring, and automation. Focused on delivering production-grade data pipelines that reliably power analytics and reporting. Delivered 35+ production-grade ETL/ELT pipelines across healthcare, fintech, and payments domains.',
   yearsOfExperience: 5,
-  projectsCompleted: 15,
+  pipelinebuilded : 35,
   cloudPlatforms: 2,
   domainsWorked: 4
 };
@@ -20,14 +20,14 @@ export const achievements = [
   {
     id: 1,
     title: 'Data Latency Reduction',
-    description: 'Reduced data latency by 40% through optimized pipeline architecture',
+    description: 'Reduced end-to-end data latency by up to 40% across healthcare, fintech, and payments platforms through optimized PySpark jobs,CDC ingestion, and ELT pipeline redesign',
     icon: 'zap',
     color: 'from-cyan-500 to-blue-500'
   },
   {
     id: 2,
-    title: 'Cost Optimization',
-    description: 'Cut compute costs by 20% through query optimization and resource management',
+    title: 'Migrating ETl',
+    description: 'Migrated 20+ ETL pipelines from AWS Glue to Azure Data Factory and Databricks, improving scalability and maintainability while reducing manuall maintaince by 60% ',
     icon: 'target',
     color: 'from-emerald-500 to-green-500'
   },
@@ -62,7 +62,7 @@ export const techStackTimeline = [
     company: 'Razorpay',
     role: 'Data Engineer',
     domain: 'FinTech/Payments/Fraud',
-    mainTech: ['AWS Glue', 'Kinesis', 'Lambda', 'Redshift', 'Terraform']
+    mainTech: ['AWS Glue', 'Kinesis', 'Lambda', 'Redshift', 'Athena', 'Step Functions']
   },
   {
     year: '2023-2024',
@@ -78,7 +78,7 @@ export const techStackTimeline = [
     company: 'Mayo Clinic',
     role: 'Data Engineer',
     domain: 'Healthcare/Clinical Analytics',
-    mainTech: ['Azure Databricks', 'ADF', 'Synapse', 'dbt', 'Terraform']
+    mainTech: ['Azure Databricks', 'ADF', 'Synapse', 'dbt', 'Power BI']
   }
 ];
 
@@ -89,7 +89,6 @@ export const skills = {
     { name: 'PySpark', proficiency: 90 },
     { name: 'Shell', proficiency: 85 },
     { name: 'Scala', proficiency: 70 },
-    { name: 'Java', proficiency: 70 }
   ],
   'Cloud Platforms': [
     { name: 'AWS', proficiency: 90 },
@@ -114,14 +113,6 @@ export const skills = {
     { name: 'Athena', proficiency: 85 },
     { name: 'Presto', proficiency: 80 },
     { name: 'Delta Lake', proficiency: 85 },
-    { name: 'Apache Hudi', proficiency: 75 }
-  ],
-  'DevOps & IaC': [
-    { name: 'Terraform', proficiency: 90 },
-    { name: 'AWS CloudFormation', proficiency: 85 },
-    { name: 'Docker', proficiency: 85 },
-    { name: 'GitHub Actions', proficiency: 85 },
-    { name: 'Jenkins', proficiency: 80 }
   ],
   'Data Visualization': [
     { name: 'Power BI', proficiency: 90 },
