@@ -5,7 +5,7 @@ export const personalInfo = {
   title: 'Data Engineer',
   email: 'poornasai1312@outlook.com',
   phone: '+1 507-403-8664',
-  linkedin: 'linkedin.com/in/purnasai-pd',
+  linkedin: 'https://www.linkedin.com/in/poornasaid',
   github: 'github.com/purnasai1312',
   website: 'poorna-de.com',
   location: 'Minneapolis, MN',
