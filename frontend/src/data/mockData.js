@@ -1,7 +1,7 @@
 // Mock data for Data Engineering Portfolio
 
 export const personalInfo = {
-  name: 'Poorna Sai Dumpa',
+  name: 'Poorna Sai',
   title: 'Data Engineer',
   email: 'poornasai1312@outlook.com',
   phone: '+1 507-403-8664',
